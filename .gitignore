@@ -1,0 +1,15 @@
+# ===== Backend =====
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/build/
+
+# ===== Frontend =====
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# ===== Common =====
+*.log
+.DS_Store
+.env
