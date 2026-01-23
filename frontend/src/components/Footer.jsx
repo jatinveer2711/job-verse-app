@@ -1,7 +1,10 @@
 import React from 'react'
 import { Briefcase, User, Mail, Phone } from "lucide-react";
+import { useAuth } from '../context/AuthContext';
 
 export default function Footer() {
+    const user = useAuth()
+    if (!user ) return null;
   return (
     <footer className="bg-gray-900 text-gray-300 mt-20">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">

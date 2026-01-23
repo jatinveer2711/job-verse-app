@@ -17,8 +17,11 @@ export default function JobPost() {
     const[error,setError] = useState("")
     const[companyId,setCompanyId] = useState("")
     const[success,setSuccess] = useState("")
+
     useEffect(()=>{
+      
         const id = localStorage.getItem("companyId")
+        
         setCompanyId(id)
        },[])
     const postJob = async(e)=>{
@@ -30,6 +33,10 @@ export default function JobPost() {
             setLoading(false)
             return
         }
+        console.log({
+  ...jobData,
+  companyId
+    });
 
        try {
         const res = await axios.post('http://localhost:4002/api/auth/post-job',{

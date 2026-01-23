@@ -97,7 +97,7 @@ export default function MyApplication() {
                   {item.jobId?.salaryRange || "application no avaible"}
                 </p>
                 <p>
-                  <span className="font-medium text-gray-800">💰 status:</span>{" "}
+                  <span className="font-medium text-gray-800">📊 status:</span>{" "}
                   {item.status}
                 </p>
 

@@ -31,6 +31,8 @@ export default function CreateCompany() {
         })
         if (res.data) {
           setCheckingCompany(true)
+          localStorage.setItem
+
         }
       } catch (error) {
         console.log(error)

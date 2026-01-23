@@ -8,6 +8,7 @@ export default function RecruiterDashboard() {
   const [info, setInfo] = useState([])
 
   const [loading, setLoading] = useState(true)
+ 
   const { token } = useAuth()
   useEffect(()=>{
     fetchCompany()
@@ -22,7 +23,11 @@ export default function RecruiterDashboard() {
       })
      
       setInfo(res.data)
-
+      const companyId = res.data._id
+      localStorage.setItem("companyId",companyId)
+      console.log(companyId);
+      
+      
       
       setLoading(false)
     } catch (error) {
