@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
     const {token} = useAuth();
+    const navigate = useNavigate()
     const handleJobSeekerNavigate = (e) => {
     // Agar token hai aur user ka role jobseeker hai → stop normal link navigation
     if (token && user?.role === "jobseeker") {
@@ -20,17 +22,7 @@ export default function HomePage() {
   }
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-200 flex flex-col">
-      {/* Navbar */}
-      <header className="w-full py-4 shadow-sm bg-white">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-purple-600">JobVerse</h1>
-          <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
-            <a href="#features" className="hover:text-purple-600">Features</a>
-            <a href="#roles" className="hover:text-purple-600">For You</a>
-            <a href="#contact" className="hover:text-purple-600">Contact</a>
-          </nav>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="flex-1 flex items-center justify-center px-6 py-10">
@@ -120,12 +112,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="py-6 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-6 text-center text-gray-600">
-          © {new Date().getFullYear()} JobVerse — All Rights Reserved
-        </div>
-      </footer>
+    {/* Sign Up CTA Section */}
+<section className="py-20 bg-white border-t">
+  <div className="max-w-4xl mx-auto px-6 text-center">
+    <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+      Ready to start your journey?
+    </h3>
+
+    <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+      Join JobVerse today and connect with recruiters or discover your next
+      opportunity — all in one platform.
+    </p>
+
+    <button
+      onClick={() => navigate("/signup")}
+      className="px-10 py-4 bg-white text-purple-600 border border-purple-600 rounded-2xl text-lg font-semibold shadow-sm hover:bg-purple-50 transition"
+    >
+      Sign Up for Free
+    </button>
+  </div>
+</section>
+
     </div>
   );
 }

@@ -236,8 +236,12 @@ export default function Myjobs() {
 
                     <button
                       className="p-1.5 sm:p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition"
-                      onClick={() => {
-                        handleDelete(job._id)
+                      onClick={() => {  
+                        const configiration = window.confirm("Are you sure you want to delete this job")
+                        if(configiration){
+                          handleDelete(job._id)
+                        }
+                        
                       }}
                       title="Delete"
                     >

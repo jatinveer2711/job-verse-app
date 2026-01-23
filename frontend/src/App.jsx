@@ -17,6 +17,7 @@ import Myjobs from './pages/Myjobs';
 import OpenJob from './pages/OpenJob';
 import RecruiterApplicants from './pages/RecruiterApplicants';
 import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 export default function App() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -47,6 +48,8 @@ export default function App() {
         <Route path='/Applicants' element={<ProtectedRoute allowRoles={["recruiter"]}><RecruiterApplicants></RecruiterApplicants></ProtectedRoute>}></Route>
 
       </Routes>
+      {user?.role==="user" && <Footer></Footer>}
+      {user?.role==="recruiter" && <Footer></Footer>}
     </Router>
 
 

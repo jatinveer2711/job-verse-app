@@ -38,6 +38,7 @@ export default function MyApplication() {
           },
         }
       );
+      
 
 
 
@@ -63,6 +64,7 @@ export default function MyApplication() {
       </h1>
 
       {applications.length === 0 ? (
+        
         <div className="p-6 bg-white rounded-xl shadow-sm border text-center text-gray-600">
           No applications found.
         </div>
@@ -75,24 +77,24 @@ export default function MyApplication() {
             >
               {/* Job Title */}
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                {item.jobId.title}
+                {item.jobId?.title || "application not avaible "}
               </h2>
 
               {/* Job Description */}
               <p className="text-gray-600 leading-relaxed mb-3">
-                {item.jobId.description}
+                {item.jobId?.description || "application no avaible"}
               </p>
 
               {/* Job Info Grid */}
               <div className="grid grid-cols-1 gap-2 text-sm text-gray-700">
                 <p>
                   <span className="font-medium text-gray-800">📍 Location:</span>{" "}
-                  {item.jobId.location}
+                  {item.jobId?.location  || "application no avaible"}
                 </p>
 
                 <p>
                   <span className="font-medium text-gray-800">💰 Salary:</span>{" "}
-                  {item.jobId.salaryRange}
+                  {item.jobId?.salaryRange || "application no avaible"}
                 </p>
                 <p>
                   <span className="font-medium text-gray-800">💰 status:</span>{" "}
@@ -101,7 +103,7 @@ export default function MyApplication() {
 
                 <p>
                   <span className="font-medium text-gray-800">🛠 Skills:</span>{" "}
-                  {item.jobId.skillsRequired}
+                  {item.jobId?.skillsRequired || "application no avaible"}
                 </p>
                 <DeleteIcon
                   className="h-5 w-5 text-gray-600 hover:text-gray-800 cursor-pointer transition-colors duration-200"
