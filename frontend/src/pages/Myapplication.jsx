@@ -12,7 +12,7 @@ export default function MyApplication() {
 
   const deleteApplication = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4002/api/auth/delete/applications/${id}`, {
+      const res = await axios.delete(`https://job-verse-app.onrender.com/api/auth/delete/applications/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -31,7 +31,7 @@ export default function MyApplication() {
       // const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `http://localhost:4002/api/auth/getApplication`,
+        `https://job-verse-app.onrender.com/api/auth/getApplication`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

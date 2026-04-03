@@ -13,7 +13,7 @@ export default function RecruiterApplicants() {
   const fetchApplications = async () => {
     try {
       setLaoding(true)
-      const res = await axios.get('http://localhost:4002/api/auth/recruiter/applications', {
+      const res = await axios.get('https://job-verse-app.onrender.com/api/auth/recruiter/applications', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ export default function RecruiterApplicants() {
 
   const updateApplications = async (id, newStatus) => {
     try {
-      const res = await axios.put(`http://localhost:4002/api/auth/update/applications/${id}`, {
+      const res = await axios.put(`https://job-verse-app.onrender.com/api/auth/update/applications/${id}`, {
         status: newStatus
       }, {
         headers: {

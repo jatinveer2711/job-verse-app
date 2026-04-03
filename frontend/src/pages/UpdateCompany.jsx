@@ -23,7 +23,7 @@ export default function UpdateCompany() {
     useEffect(() => {
         const fetchCompany = async () => {
             try {
-                const res = await axios.get('http://localhost:4002/api/auth/getAll', {
+                const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getAll', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -59,7 +59,7 @@ export default function UpdateCompany() {
 
         try {
             await axios.put(
-                'http://localhost:4002/api/auth/updateCompany',
+                'https://job-verse-app.onrender.com/api/auth/updateCompany',
                 updateData,
                 {
                     headers: {

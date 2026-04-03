@@ -22,7 +22,7 @@ export default function Login() {
         setError("")
         setLoading(true)
         try {
-            const res = await axios.post('http://localhost:4002/api/auth/login', formdata)
+            const res = await axios.post('https://job-verse-app.onrender.com/api/auth/login', formdata)
             
 
             const { token ,role,userId} = res.data
@@ -33,7 +33,7 @@ export default function Login() {
 
             if (role === "user") {
                 try {
-                    const res = await axios.get('http://localhost:4002/api/auth/getProfile',{
+                    const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getProfile',{
                         headers:{
                             Authorization:`Bearer ${token}`
                         }
@@ -56,7 +56,7 @@ export default function Login() {
             }
             else if (role === "recruiter") {
                 try {
-                    const res = await axios.get('http://localhost:4002/api/auth/getAll',{
+                    const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getAll',{
                         headers:{
                             Authorization:`Bearer ${token}`
                         }

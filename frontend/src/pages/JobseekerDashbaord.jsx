@@ -24,7 +24,7 @@ export default function JobseekerDashbaord() {
     e.preventDefault();
     try {
 
-      const res = await axios.post('http://localhost:4002/api/auth/apply', {
+      const res = await axios.post('https://job-verse-app.onrender.com/api/auth/apply', {
         jobId: selectedJObs._id,
         coverLetter: applyJobs.coverLetter,
         resume: applyJobs.resume
@@ -59,7 +59,7 @@ export default function JobseekerDashbaord() {
 
   const hanldeSearch = async () => {
     try {
-      const res = await axios.get(`http://localhost:4002/api/auth/searchJob?keyword=${searchText}`, {
+      const res = await axios.get(`https://job-verse-app.onrender.com/api/auth/searchJob?keyword=${searchText}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

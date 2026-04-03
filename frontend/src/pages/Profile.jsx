@@ -31,7 +31,7 @@ const handleChange = async(e)=>{
 useEffect(()=>{
   const checkProfile = async()=>{
   try {
-    const res = await axios.get('http://localhost:4002/api/auth/getProfile',{
+    const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getProfile',{
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -56,7 +56,7 @@ const handleSumbit = async(e)=>{
      setError("")
      setLoading(true)
     try {
-        const res = await axios.post('http://localhost:4002/api/auth/createUser',formData,{
+        const res = await axios.post('https://job-verse-app.onrender.com/api/auth/createUser',formData,{
             headers:{
                 Authorization:`Bearer ${token}`
             }

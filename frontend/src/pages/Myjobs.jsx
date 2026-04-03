@@ -28,7 +28,7 @@ export default function Myjobs() {
     setLoading(true)
     setError("")
     try {
-      const res = await axios.put(`http://localhost:4002/api/auth/update-job/${updateId}`, formData, {
+      const res = await axios.put(`https://job-verse-app.onrender.com/api/auth/update-job/${updateId}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -65,7 +65,7 @@ export default function Myjobs() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4002/api/auth/delete-job/${id}`, {
+      const res = await axios.delete(`https://job-verse-app.onrender.com/api/auth/delete-job/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -88,7 +88,7 @@ export default function Myjobs() {
     setError("")
     try {
 
-      const res = await axios.get('http://localhost:4002/api/auth/get-job', {
+      const res = await axios.get('https://job-verse-app.onrender.com/api/auth/get-job', {
         headers: {
           Authorization: `Bearer ${token}`
         }

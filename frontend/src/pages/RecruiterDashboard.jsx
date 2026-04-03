@@ -16,7 +16,7 @@ export default function RecruiterDashboard() {
    const fetchCompany = async () => {
 
     try {
-      const res = await axios.get('http://localhost:4002/api/auth/getAll', {
+      const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getAll', {
         headers: {
           Authorization: `Bearer ${token}`
         }

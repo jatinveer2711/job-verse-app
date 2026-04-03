@@ -35,7 +35,7 @@ export default function JobPost() {
         }
      
        try {
-        const res = await axios.post('http://localhost:4002/api/auth/post-job',{
+        const res = await axios.post('https://job-verse-app.onrender.com/api/auth/post-job',{
             ...jobData,
             companyId,
              

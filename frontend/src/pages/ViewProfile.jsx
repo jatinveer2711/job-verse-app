@@ -21,7 +21,7 @@ export default function ViewProfile() {
   // update the profile
   const hadnleUpdate = async () => {
     try {
-      const res = await axios.put('http://localhost:4002/api/auth/updateProfile', formData, {
+      const res = await axios.put('https://job-verse-app.onrender.com/api/auth/updateProfile', formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -48,7 +48,7 @@ export default function ViewProfile() {
     setLoading(true)
 
     try {
-      const res = await axios.get('http://localhost:4002/api/auth/getProfile', {
+      const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getProfile', {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -26,7 +26,7 @@ export default function Signup() {
         setError("")
         setLoading(true)
         try {
-            const res = await axios.post('http://localhost:4002/api/auth/signup', data)
+            const res = await axios.post('https://job-verse-app.onrender.com/api/auth/signup', data)
             alert("signup is succesfull")
             navigate('/login')
         } catch (error) {

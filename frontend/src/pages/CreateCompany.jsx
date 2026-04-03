@@ -24,7 +24,7 @@ export default function CreateCompany() {
   useEffect(() => {
     const fetchCompany = async () => {
       try {
-        const res = await axios.get('http://localhost:4002/api/auth/getAll', {
+        const res = await axios.get('https://job-verse-app.onrender.com/api/auth/getAll', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -47,7 +47,7 @@ export default function CreateCompany() {
     setError("")
     setLoading(true)
     try {
-      const res = await axios.post('http://localhost:4002/api/auth/create', formData, {
+      const res = await axios.post('https://job-verse-app.onrender.com/api/auth/create', formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }

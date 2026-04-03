@@ -15,7 +15,7 @@ export default function OpenJob() {
 
   const fetchJobs = async()=>{
      try {
-      const res = await axios.get(`http://localhost:4002/api/auth/get-Job/${id}`,{
+      const res = await axios.get(`https://job-verse-app.onrender.com/api/auth/get-Job/${id}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }
