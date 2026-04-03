@@ -33,11 +33,7 @@ export default function JobPost() {
             setLoading(false)
             return
         }
-        console.log({
-  ...jobData,
-  companyId
-    });
-
+     
        try {
         const res = await axios.post('http://localhost:4002/api/auth/post-job',{
             ...jobData,

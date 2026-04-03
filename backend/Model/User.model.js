@@ -15,7 +15,10 @@ export const userSchema = new mongoose.Schema({
     },
    role:{
     type:String,
-    enum:['user','recruiter']
+    enum:['user','recruiter'],
+    trim:true,
+    lowercase:true ,
+    required:true
    },
    createdAt:{
     type:Date,

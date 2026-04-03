@@ -20,6 +20,7 @@ export const createCompany = async (req,res)=>{
     }
 }
 export const getCompanyByRecruter = async(req,res)=>{
+   
     try {
         const companies = await Company.findOne({
             recruiterID:req.user.id
