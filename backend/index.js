@@ -7,7 +7,8 @@ import companyROute from './route/company.route.js'
 import profileRoute from './route/profile.route.js'
 import applicationRoute from './route/application.route.js'
 import jobRoute from './route/job.route.js'
-
+import dns from 'dns';
+dns.setServers(['8.8.8.8','1.1.1.1']);
 dotenv.config(); 
 
 const app = express(); 
