@@ -134,6 +134,13 @@ export default function Navbar() {
           </Link>
 
           <Link
+                    to="/Applicants"
+                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#F83002] transition-colors"
+                  >
+                    View Applications
+                  </Link>
+
+          <Link
            
             className="block w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-[#F83002] transition text-center"
             onClick= {()=>{
